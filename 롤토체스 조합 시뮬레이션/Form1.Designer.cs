@@ -33,15 +33,15 @@ namespace 롤토체스_조합_시뮬레이션
             this.WB1 = new System.Windows.Forms.WebBrowser();
             this.button1 = new System.Windows.Forms.Button();
             this.select1 = new System.Windows.Forms.ComboBox();
-            this.id = new System.Windows.Forms.TextBox();
-            this.pwd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.TextBox();
+            this.pwd = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // WB1
@@ -71,20 +71,6 @@ namespace 롤토체스_조합_시뮬레이션
             this.select1.Name = "select1";
             this.select1.Size = new System.Drawing.Size(208, 20);
             this.select1.TabIndex = 3;
-            // 
-            // id
-            // 
-            this.id.Location = new System.Drawing.Point(90, 180);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(208, 21);
-            this.id.TabIndex = 4;
-            // 
-            // pwd
-            // 
-            this.pwd.Location = new System.Drawing.Point(90, 139);
-            this.pwd.Name = "pwd";
-            this.pwd.Size = new System.Drawing.Size(147, 21);
-            this.pwd.TabIndex = 5;
             // 
             // label1
             // 
@@ -138,15 +124,16 @@ namespace 롤토체스_조합_시뮬레이션
             this.label5.TabIndex = 9;
             this.label5.Text = "검색할 조합";
             // 
-            // button2
+            // loginButton
             // 
-            this.button2.Font = new System.Drawing.Font("빛의 계승자 Regular", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Location = new System.Drawing.Point(10, 227);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 46);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "검색";
-            this.button2.UseVisualStyleBackColor = true;
+            this.loginButton.Font = new System.Drawing.Font("빛의 계승자 Regular", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.loginButton.Location = new System.Drawing.Point(10, 227);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(75, 46);
+            this.loginButton.TabIndex = 10;
+            this.loginButton.Text = "로그인";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // label6
             // 
@@ -158,20 +145,35 @@ namespace 롤토체스_조합_시뮬레이션
             this.label6.TabIndex = 11;
             this.label6.Text = "로그인은 필수가 아니며, 사전 등록된 사람들만 사용할 수 있습니다.";
             // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(90, 143);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(139, 21);
+            this.id.TabIndex = 12;
+            // 
+            // pwd
+            // 
+            this.pwd.Location = new System.Drawing.Point(90, 184);
+            this.pwd.Name = "pwd";
+            this.pwd.Size = new System.Drawing.Size(208, 21);
+            this.pwd.TabIndex = 13;
+            this.pwd.UseSystemPasswordChar = true;
+            // 
             // MF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1095, 606);
+            this.Controls.Add(this.pwd);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.loginButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pwd);
-            this.Controls.Add(this.id);
             this.Controls.Add(this.select1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.WB1);
@@ -190,15 +192,15 @@ namespace 롤토체스_조합_시뮬레이션
         private System.Windows.Forms.WebBrowser WB1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox select1;
-        private System.Windows.Forms.TextBox id;
-        private System.Windows.Forms.TextBox pwd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox id;
+        private System.Windows.Forms.TextBox pwd;
     }
 }
 
