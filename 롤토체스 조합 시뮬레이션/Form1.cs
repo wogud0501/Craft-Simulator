@@ -18,6 +18,7 @@ using static System.Net.WebRequestMethods.Http;
 using static System.Net.Http.HttpClient;
 using System.Net;
 using System.Net.Http;
+using System.Data.SqlClient;
 
 namespace 롤토체스_조합_시뮬레이션
 {
@@ -35,6 +36,11 @@ namespace 롤토체스_조합_시뮬레이션
         }
 
         private void MF_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
